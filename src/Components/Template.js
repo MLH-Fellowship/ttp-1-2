@@ -26,6 +26,18 @@ class Template extends Component {
                 <h3>{this.props.phoneNum}</h3>
                 <h3> {this.props.email}</h3>
                 <h3> {this.props.summary}</h3>
+              </ul>
+            </CardText>
+          </CardBody>
+        </Card>
+
+
+        <Card>
+          <CardHeader tag="h3">Educational Information</CardHeader>
+          <CardBody>
+            {/* <CardTitle>Special Title Treatment</CardTitle> */}
+            <CardText>
+              <ul>
                 <h3> {this.props.university}</h3>
                 <h3> {this.props.major}</h3>
                 <h3> {this.props.degree}</h3>
