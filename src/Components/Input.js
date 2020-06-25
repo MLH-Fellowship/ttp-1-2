@@ -172,6 +172,8 @@ class InputPage extends Component {
                   name="firstName"
                   id="firstName"
                   placeholder="First name"
+                  value={this.state.firstName}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -183,6 +185,8 @@ class InputPage extends Component {
                   name="lastName"
                   id="lastName"
                   placeholder="Last name"
+                  value={this.state.lastName}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -191,7 +195,14 @@ class InputPage extends Component {
             <Col md={4}>
               <FormGroup>
                 <Label for="city">City</Label>
-                <Input type="text" name="city" id="city" placeholder="City" />
+                <Input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="City"
+                  value={this.state.city}
+                  onChange={this.handleChange}
+                />
               </FormGroup>
             </Col>
             <Col md={4}>
@@ -202,6 +213,8 @@ class InputPage extends Component {
                   name="phoneNum"
                   id="phoneNum"
                   placeholder="xxx-xxx-xxxx"
+                  value={this.state.phoneNum}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -213,6 +226,8 @@ class InputPage extends Component {
                   name="email"
                   id="email"
                   placeholder="example@email.com"
+                  value={this.state.email}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -226,6 +241,9 @@ class InputPage extends Component {
                   name="summary"
                   id="summary"
                   placeholder="Summary here"
+                  value={this.state.summary}
+                  style={{ height: "100px" }}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -240,6 +258,8 @@ class InputPage extends Component {
                   name="university"
                   id="university"
                   placeholder="University"
+                  value={this.state.university}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -251,6 +271,8 @@ class InputPage extends Component {
                   name="major"
                   id="major"
                   placeholder="Major"
+                  value={this.state.major}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -262,13 +284,22 @@ class InputPage extends Component {
                   name="degree"
                   id="degree"
                   placeholder="Degree"
+                  value={this.state.degree}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
             <Col md={1}>
               <FormGroup>
                 <Label for="gpa">GPA</Label>
-                <Input type="text" name="gpa" id="gpa" placeholder="GPA" />
+                <Input
+                  type="text"
+                  name="gpa"
+                  id="gpa"
+                  placeholder="GPA"
+                  value={this.state.gpa}
+                  onChange={this.handleChange}
+                />
               </FormGroup>
             </Col>
           </Row>
@@ -281,6 +312,9 @@ class InputPage extends Component {
                   name="activities"
                   id="activities"
                   placeholder="Social activities/clubs"
+                  value={this.state.activities}
+                  style={{ height: "100px" }}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
@@ -293,7 +327,10 @@ class InputPage extends Component {
                   type="textarea"
                   name="description"
                   id="description"
-                  placeholder="Deescription"
+                  placeholder="Description"
+                  value={this.state.description}
+                  style={{ height: "100px" }}
+                  onChange={this.handleChange}
                 />
               </FormGroup>
             </Col>
