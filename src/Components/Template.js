@@ -14,9 +14,8 @@ class Template extends Component {
     return (
       <div>
         <div className="Resume-header">
-          {this.props.firstName} {this.props.lastName}
-          <br></br>
-          {this.props.city}, {this.props.state} | {this.props.phoneNum} | {this.props.email}
+          <h1>{this.props.firstName} {this.props.lastName}</h1>
+          <p1>{this.props.city}, {this.props.state} | {this.props.phoneNum} | {this.props.email}</p1>
         </div>
 
         <Card>

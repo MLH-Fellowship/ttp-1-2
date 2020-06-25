@@ -9,3 +9,11 @@ body{
   padding: 10px 10px 10px;
   font: small-caps bold 2.25rem cursive;
 }
+
+.Resume-header {
+  background-color: black;
+  color: white;
+  /*font-size: 2.25rem;*/
+  padding: 10px 10px 0px;
+  font: small-caps bold 2.25rem cursive;
+}
