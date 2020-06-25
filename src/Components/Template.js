@@ -19,14 +19,15 @@ class Template extends Component {
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
               <ul>
-                <h3>{this.props.firstName} {this.props.lastName}</h3>
+                <h3>
+                  {this.props.firstName} {this.props.lastName}
+                </h3>
                 <h3>{this.props.city}</h3>
                 <h3>{this.props.phoneNum}</h3>
                 <h3> {this.props.email}</h3>
                 <h3> {this.props.summary}</h3>
-                <h3> {this.props.Background}</h3>
                 <h3> {this.props.university}</h3>
-                <h3>  {this.props.major}</h3>
+                <h3> {this.props.major}</h3>
                 <h3> {this.props.degree}</h3>
                 <h3> {this.props.gpa}</h3>
                 <h3> {this.props.activities}</h3>
