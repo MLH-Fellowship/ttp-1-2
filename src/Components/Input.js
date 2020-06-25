@@ -21,6 +21,12 @@ class InputPage extends Component {
       gpa: "",
       activities: "",
       description: "",
+
+      company: "",
+      jobTitle: "",
+      startAndEndDate: "",
+      duties: "",
+
       showTemplate: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -352,6 +358,66 @@ class InputPage extends Component {
                 </FormGroup>
               </Col>
             </Row>
+
+            <h2>Work Experience</h2>
+            <Row form>
+              <Col md={5}>
+                <FormGroup>
+                  <Label for="company">Company</Label>
+                  <Input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Company Name"
+                    value={this.state.company}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Label for="jobTitle">Job Title</Label>
+                  <Input
+                    type="text"
+                    name="jobTitle"
+                    id="jobTitle"
+                    placeholder="jobTitle"
+                    value={this.state.jobTitle}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
+                <FormGroup>
+                  <Label for="startAndEndDate">Start Date - End Date</Label>
+                  <Input
+                    type="text"
+                    name="startAndEndDate"
+                    id="startAndEndDate"
+                    placeholder="Jan 2000 - Jan 3000"
+                    value={this.state.startAndEndDate}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row Form>
+              <Col md={12}>
+                <FormGroup>
+                  <Label for="duties">Duties</Label>
+                  <Input
+                    type="textarea"
+                    name="duties"
+                    id="duties"
+                    placeholder=""
+                    value={this.state.duties}
+                    style={{ height: "100px" }}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+
             <Button outline color="success" onClick={this.clickToggle}>
               Submit
             </Button>
