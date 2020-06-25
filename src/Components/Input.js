@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Template from "./Template";
 
 class Input extends Component {
@@ -20,7 +19,6 @@ class Input extends Component {
       showTemplate: false,
     };
     this.handleChange = this.handleChange.bind(this);
-    //    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -28,20 +26,6 @@ class Input extends Component {
       [event.target.name]: event.target.value,
     });
   }
-
-  // handleSubmit(event) {
-  //   alert(
-  //     "Values: " +
-  //       this.state.firstName +
-  //       " " +
-  //       this.state.lastName +
-  //       " " +
-  //       this.state.college +
-  //       " " +
-  //       this.state.city
-  //   );
-  //   event.preventDefault();
-  // }
 
   clickToggle = () => {
     this.state.showTemplate === true
