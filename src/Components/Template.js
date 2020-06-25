@@ -13,27 +13,18 @@ class Template extends Component {
   render() {
     return (
       <div>
-        <div className="App-header">
+        <div className="Resume-header">
           {this.props.firstName} {this.props.lastName}
           <br></br>
           {this.props.city}, {this.props.state} | {this.props.phoneNum} | {this.props.email}
         </div>
 
         <Card>
-          <CardHeader tag="h3">Personal Information</CardHeader>
+          <CardHeader tag="h3">Professional Summary</CardHeader>
           <CardBody>
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
-              <ul>
-                <h3>
-                  {this.props.firstName} {this.props.lastName}
-                </h3>
-                <h3>{this.props.city}</h3>
-                <h3>{this.props.state}</h3>
-                <h3>{this.props.phoneNum}</h3>
-                <h3> {this.props.email}</h3>
-                <h3> {this.props.summary}</h3>
-              </ul>
+             <p1> {this.props.summary} </p1>
             </CardText>
           </CardBody>
         </Card>
