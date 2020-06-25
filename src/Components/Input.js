@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Template from "./Template";
-import { Button } from 'reactstrap';
+//import { Button } from "reactstrap";
+import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
 
-
-class Input extends Component {
+class InputPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,6 +14,7 @@ class Input extends Component {
       email: "",
       summary: "",
       major: "",
+      degree: "",
       university: "",
       gpa: "",
       activities: "",
@@ -40,133 +41,276 @@ class Input extends Component {
       this.state.showTemplate === true ? (
         <div>
           <Template {...this.state} />
-          <Button outline color="warning" onClick={this.clickToggle}>Go Back</Button>
+          <Button outline color="warning" onClick={this.clickToggle}>
+            Go Back
+          </Button>
         </div>
       ) : (
-        <form onSubmit={this.handleSubmit}>
-          <h2>Personal Information:</h2>
-          <label>
-            First name:
-            <input
-              type="text"
-              name="firstName"
-              value={this.state.firstName}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Last name:
-            <input
-              type="text"
-              name="lastName"
-              value={this.state.lastName}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            City:
-            <input
-              type="text"
-              name="city"
-              value={this.state.city}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Phone Number:
-            <input
-              type="text"
-              name="phoneNum"
-              value={this.state.phoneNum}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Email:
-            <input
-              type="text"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Professional Summary:
-            <input
-              type="text"
-              name="summary"
-              value={this.state.summary}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
+        // <form onSubmit={this.handleSubmit}>
+        //   <h2>Personal Information:</h2>
+        //   <label>
+        //     First name:
+        //     <input
+        //       type="text"
+        //       name="firstName"
+        //       value={this.state.firstName}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Last name:
+        //     <input
+        //       type="text"
+        //       name="lastName"
+        //       value={this.state.lastName}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     City:
+        //     <input
+        //       type="text"
+        //       name="city"
+        //       value={this.state.city}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Phone Number:
+        //     <input
+        //       type="text"
+        //       name="phoneNum"
+        //       value={this.state.phoneNum}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Email:
+        //     <input
+        //       type="text"
+        //       name="email"
+        //       value={this.state.email}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Professional Summary:
+        //     <input
+        //       type="text"
+        //       name="summary"
+        //       value={this.state.summary}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <h2>Educational Background</h2>
+        //   <label>
+        //     University:
+        //     <input
+        //       type="text"
+        //       name="university"
+        //       value={this.state.university}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Major:
+        //     <input
+        //       type="text"
+        //       name="major"
+        //       value={this.state.major}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     GPA:
+        //     <input
+        //       type="text"
+        //       name="gpa"
+        //       value={this.state.gpa}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Activities:
+        //     <input
+        //       type="text"
+        //       name="activities"
+        //       value={this.state.activities}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <label>
+        //     Description:
+        //     <input
+        //       type="text"
+        //       name="description"
+        //       value={this.state.description}
+        //       onChange={this.handleChange}
+        //     />
+        //   </label>
+        //   <br></br>
+        //   <Button outline color="success" onClick={this.clickToggle}>Submit</Button>
+        // </form>
+        <Form>
+          <h2>Personal Information</h2>
+          <Row form>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="firstName">First Name</Label>
+                <Input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="First name"
+                />
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="lastName">Last Name</Label>
+                <Input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last name"
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row Form>
+            <Col md={4}>
+              <FormGroup>
+                <Label for="city">City</Label>
+                <Input type="text" name="city" id="city" placeholder="City" />
+              </FormGroup>
+            </Col>
+            <Col md={4}>
+              <FormGroup>
+                <Label for="phoneNum">Phone Number</Label>
+                <Input
+                  type="text"
+                  name="phoneNum"
+                  id="phoneNum"
+                  placeholder="xxx-xxx-xxxx"
+                />
+              </FormGroup>
+            </Col>
+            <Col md={4}>
+              <FormGroup>
+                <Label for="email">Email</Label>
+                <Input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="example@email.com"
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row form>
+            <Col md={12}>
+              <FormGroup>
+                <Label for="summary">Professional Summary</Label>
+                <Input
+                  type="textarea"
+                  name="summary"
+                  id="summary"
+                  placeholder="Summary here"
+                />
+              </FormGroup>
+            </Col>
+          </Row>
           <h2>Educational Background</h2>
-          <label>
-            University:
-            <input
-              type="text"
-              name="university"
-              value={this.state.university}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Major:
-            <input
-              type="text"
-              name="major"
-              value={this.state.major}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            GPA:
-            <input
-              type="text"
-              name="gpa"
-              value={this.state.gpa}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Activities:
-            <input
-              type="text"
-              name="activities"
-              value={this.state.activities}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <label>
-            Description:
-            <input
-              type="text"
-              name="description"
-              value={this.state.description}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br></br>
-          <Button outline color="success" onClick={this.clickToggle}>Submit</Button>
-        </form>
+          <Row form>
+            <Col md={5}>
+              <FormGroup>
+                <Label for="university">University</Label>
+                <Input
+                  type="text"
+                  name="university"
+                  id="university"
+                  placeholder="University"
+                />
+              </FormGroup>
+            </Col>
+            <Col md={3}>
+              <FormGroup>
+                <Label for="major">Major</Label>
+                <Input
+                  type="text"
+                  name="major"
+                  id="major"
+                  placeholder="Major"
+                />
+              </FormGroup>
+            </Col>
+            <Col md={3}>
+              <FormGroup>
+                <Label for="degree">Degree</Label>
+                <Input
+                  type="text"
+                  name="degree"
+                  id="degree"
+                  placeholder="Degree"
+                />
+              </FormGroup>
+            </Col>
+            <Col md={1}>
+              <FormGroup>
+                <Label for="gpa">GPA</Label>
+                <Input type="text" name="gpa" id="gpa" placeholder="GPA" />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row Form>
+            <Col md={12}>
+              <FormGroup>
+                <Label for="activities">Extra Curricular Activities</Label>
+                <Input
+                  type="textarea"
+                  name="activities"
+                  id="activities"
+                  placeholder="Social activities/clubs"
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row Form>
+            <Col md={12}>
+              <FormGroup>
+                <Label for="description">Description</Label>
+                <Input
+                  type="textarea"
+                  name="description"
+                  id="description"
+                  placeholder="Deescription"
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Button outline color="success" onClick={this.clickToggle}>
+            Submit
+          </Button>
+        </Form>
       );
 
-    return <div>
-      <div className = "App-header">
-        Resume Builder
+    return (
+      <div>
+        <div className="App-header">Resume Builder</div>
+        {templates}
       </div>
-      {templates}
-      </div>;
+    );
   }
 }
 
-export default Input;
+export default InputPage;

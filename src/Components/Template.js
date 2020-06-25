@@ -15,6 +15,7 @@ class Template extends Component {
         <h1>Educational Background</h1>
         <h1>{this.props.university}</h1>
         <h1>{this.props.major}</h1>
+        <h1>{this.props.degree}</h1>
         <h1>{this.props.gpa}</h1>
         <h1>{this.props.activities}</h1>
         <h1>{this.props.description}</h1>
