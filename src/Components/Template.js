@@ -45,6 +45,21 @@ class Template extends Component {
           </CardBody>
         </Card>
 
+        <Card>
+          <CardHeader tag="h3">Work Experience</CardHeader>
+          <CardBody>
+            {/* <CardTitle>Special Title Treatment</CardTitle> */}
+            <CardText>
+              <ul>
+                <h3> {this.props.company}</h3>
+                <h3> {this.props.jobTitle}</h3>
+                <h3> {this.props.startAndEndDate}</h3>
+                <h3> {this.props.duties}</h3>
+              </ul>
+            </CardText>
+          </CardBody>
+        </Card>
+
         {/* <h1>Personal Information</h1>
         <h1>
           {this.props.firstName} {this.props.lastName}
