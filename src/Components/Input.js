@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Template from "./Template";
+import { Button } from 'reactstrap';
+
 
 class Input extends Component {
   constructor(props) {
@@ -20,7 +21,6 @@ class Input extends Component {
       showTemplate: false,
     };
     this.handleChange = this.handleChange.bind(this);
-    //    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -28,20 +28,6 @@ class Input extends Component {
       [event.target.name]: event.target.value,
     });
   }
-
-  // handleSubmit(event) {
-  //   alert(
-  //     "Values: " +
-  //       this.state.firstName +
-  //       " " +
-  //       this.state.lastName +
-  //       " " +
-  //       this.state.college +
-  //       " " +
-  //       this.state.city
-  //   );
-  //   event.preventDefault();
-  // }
 
   clickToggle = () => {
     this.state.showTemplate === true
@@ -54,7 +40,7 @@ class Input extends Component {
       this.state.showTemplate === true ? (
         <div>
           <Template {...this.state} />
-          <button onClick={this.clickToggle}>Go Back</button>
+          <Button outline color="warning" onClick={this.clickToggle}>Go Back</Button>
         </div>
       ) : (
         <form onSubmit={this.handleSubmit}>
@@ -170,11 +156,16 @@ class Input extends Component {
             />
           </label>
           <br></br>
-          <input type="submit" value="Submit" onClick={this.clickToggle} />
+          <Button outline color="success" onClick={this.clickToggle}>Submit</Button>
         </form>
       );
 
-    return <div>{templates}</div>;
+    return <div>
+      <div className = "App-header">
+        Resume Builder
+      </div>
+      {templates}
+      </div>;
   }
 }
 
