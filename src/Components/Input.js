@@ -44,7 +44,8 @@ class Input extends Component {
 
   render() {
 
-    let templates = this.state.showTemplate === true ? (<Template />) : (<form onSubmit={this.handleSubmit}>
+    let templates = this.state.showTemplate === true ? ( <Template {...this.state}/>) 
+    : (<form onSubmit={this.handleSubmit}>
       <label>
         First name:
         <input
