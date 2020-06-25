@@ -44,7 +44,9 @@ class Input extends Component {
 
   render() {
 
-    let templates = this.state.showTemplate === true ? ( <Template {...this.state}/>) 
+    let templates = this.state.showTemplate === true ? (<div>
+      <Template {...this.state} />
+      <button onClick={this.clickToggle}>Go Back</button></div>) 
     : (<form onSubmit={this.handleSubmit}>
       <label>
         First name:
@@ -82,13 +84,12 @@ class Input extends Component {
           onChange={this.handleChange}
         />
       </label>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" onClick={this.clickToggle}/>
     </form>);
 
     return (
       <div>
         {templates}
-        <button onClick={this.clickToggle}>Toggle</button>
       </div>
     );
   }
