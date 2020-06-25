@@ -13,6 +13,7 @@ class InputPage extends Component {
       phoneNum: "",
       email: "",
       summary: "",
+      
       major: "",
       degree: "",
       university: "",
