@@ -15,7 +15,10 @@ class Template extends Component {
       <div>
         <div className="App-header">
           {this.props.firstName} {this.props.lastName}
+          <br></br>
+          {this.props.city}, {this.props.state} | {this.props.phoneNum} | {this.props.email}
         </div>
+
         <Card>
           <CardHeader tag="h3">Personal Information</CardHeader>
           <CardBody>
