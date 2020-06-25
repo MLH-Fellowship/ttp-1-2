@@ -242,6 +242,7 @@ class InputPage extends Component {
                   id="summary"
                   placeholder="Summary here"
                   value={this.state.summary}
+                  style={{ height: "100px" }}
                   onChange={this.handleChange}
                 />
               </FormGroup>
@@ -312,6 +313,7 @@ class InputPage extends Component {
                   id="activities"
                   placeholder="Social activities/clubs"
                   value={this.state.activities}
+                  style={{ height: "100px" }}
                   onChange={this.handleChange}
                 />
               </FormGroup>
@@ -327,6 +329,7 @@ class InputPage extends Component {
                   id="description"
                   placeholder="Description"
                   value={this.state.description}
+                  style={{ height: "100px" }}
                   onChange={this.handleChange}
                 />
               </FormGroup>
