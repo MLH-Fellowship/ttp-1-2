@@ -217,7 +217,7 @@ class InputPage extends Component {
                     name="state"
                     id="state"
                     placeholder="XX"
-                    value={this.state.city}
+                    value={this.state.state}
                     onChange={this.handleChange}
                   />
                 </FormGroup>
