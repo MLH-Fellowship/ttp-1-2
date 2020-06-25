@@ -13,6 +13,7 @@ class Template extends Component {
   render() {
     return (
       <div>
+        <div className="App-header">{this.props.firstName} {this.props.lastName}</div>
         <Card>
           <CardHeader tag="h3">Personal Information</CardHeader>
           <CardBody>
