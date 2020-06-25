@@ -13,6 +13,7 @@ class Input extends Component {
       email: "",
       summary: "",
       major: "",
+      university: "",
       gpa: "",
       activities: "",
       description: "",
@@ -123,8 +124,8 @@ class Input extends Component {
             University:
             <input
               type="text"
-              name="college"
-              value={this.state.college}
+              name="university"
+              value={this.state.university}
               onChange={this.handleChange}
             />
           </label>
