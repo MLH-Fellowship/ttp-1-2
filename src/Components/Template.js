@@ -13,7 +13,9 @@ class Template extends Component {
   render() {
     return (
       <div>
-        <div className="App-header">{this.props.firstName} {this.props.lastName}</div>
+        <div className="App-header">
+          {this.props.firstName} {this.props.lastName}
+        </div>
         <Card>
           <CardHeader tag="h3">Personal Information</CardHeader>
           <CardBody>
@@ -24,6 +26,7 @@ class Template extends Component {
                   {this.props.firstName} {this.props.lastName}
                 </h3>
                 <h3>{this.props.city}</h3>
+                <h3>{this.props.state}</h3>
                 <h3>{this.props.phoneNum}</h3>
                 <h3> {this.props.email}</h3>
                 <h3> {this.props.summary}</h3>
@@ -31,7 +34,6 @@ class Template extends Component {
             </CardText>
           </CardBody>
         </Card>
-
 
         <Card>
           <CardHeader tag="h3">Educational Information</CardHeader>

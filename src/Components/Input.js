@@ -10,6 +10,7 @@ class InputPage extends Component {
       firstName: "",
       lastName: "",
       city: "",
+      state: "",
       phoneNum: "",
       email: "",
       summary: "",
@@ -208,7 +209,20 @@ class InputPage extends Component {
                   />
                 </FormGroup>
               </Col>
-              <Col md={4}>
+              <Col md={1}>
+                <FormGroup>
+                  <Label for="state">State</Label>
+                  <Input
+                    type="text"
+                    name="state"
+                    id="state"
+                    placeholder="XX"
+                    value={this.state.city}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={3}>
                 <FormGroup>
                   <Label for="phoneNum">Phone Number</Label>
                   <Input
