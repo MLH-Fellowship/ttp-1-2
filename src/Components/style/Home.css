@@ -1,5 +1,5 @@
-body{
-    background-color: #b6dfdf;
+body {
+  background-color: #b6dfdf;
 }
 
 .App-header {
@@ -7,13 +7,14 @@ body{
   color: white;
   font-size: 2.25rem;
   padding: 10px 10px 10px;
-  font: small-caps bold 2.25rem cursive;
+  font: small-caps bold 2.25rem Georgia, serif;
 }
 
 .Resume-header {
   background-color: black;
   color: white;
-  /*font-size: 2.25rem;*/
+  text-align: right;
+  font-size: 30px;
   padding: 10px 10px 0px;
-  font: small-caps bold 2.25rem cursive;
+  /*font: small-caps bold 2.25rem cursive; */
 }

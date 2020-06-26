@@ -17,10 +17,10 @@ class Template extends Component {
           <h1>
             {this.props.firstName} {this.props.lastName}
           </h1>
-          <p1>
+          <h6>
             {this.props.city}, {this.props.state} | {this.props.phoneNum} |{" "}
             {this.props.email}
-          </p1>
+          </h6>
         </div>
 
         <Card>
