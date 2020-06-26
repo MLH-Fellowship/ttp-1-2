@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Template from "./Template";
-//import { Button } from "reactstrap";
 import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 class InputPage extends Component {
@@ -360,7 +359,6 @@ class InputPage extends Component {
 
     return (
       <div>
-        {/* <div className="App-header">Resume Builder</div> */}
         {templates}
       </div>
     );
