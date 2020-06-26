@@ -56,8 +56,8 @@ class Template extends Component {
                       </h5>
                       <h5> {result.university}</h5>
                       <ul>
-                        <li> {result.gradDate} </li>
-                        <li> {result.gpa}</li>
+                        <li> Graduation: {result.gradDate} </li>
+                        <li> GPA: {result.gpa}</li>
                         <li> {result.activities}</li>
                         <li> {result.description}</li>
                       </ul>
