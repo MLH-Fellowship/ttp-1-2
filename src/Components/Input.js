@@ -59,6 +59,7 @@ class InputPage extends Component {
       ) : (
         <div>
           <div className="App-header">Resume Builder</div>
+          <div className="input-pad">
           <Form>
             <h2>Personal Information</h2>
             <Row form>
@@ -202,7 +203,7 @@ class InputPage extends Component {
               </Col>
               <Col md={1}>
                 <FormGroup>
-                  <Label for="gradDate">Graduation Date</Label>
+                  <Label for="gradDate">Grad Date</Label>
                   <Input
                     type="text"
                     name="gradDate"
@@ -353,6 +354,7 @@ class InputPage extends Component {
               Submit
             </Button>
           </Form>
+        </div>
         </div>
       );
 
