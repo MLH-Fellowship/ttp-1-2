@@ -28,7 +28,11 @@ class Template extends Component {
           <CardBody>
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
-              <p1> {this.props.summary} </p1>
+              <div className="Professional-summary">
+                <ul>
+                  <p1> {this.props.summary} </p1>
+                </ul>
+              </div>
             </CardText>
           </CardBody>
         </Card>
@@ -38,17 +42,19 @@ class Template extends Component {
           <CardBody>
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
-              <ul>
-                <h5>
-                  {" "}
-                  {this.props.degree} - {this.props.major}{" "}
-                </h5>
-                <h5> {this.props.university}</h5>
-                <div> {this.props.gradDate} </div>
-                <div> {this.props.gpa}</div>
-                <div> {this.props.activities}</div>
-                <div> {this.props.description}</div>
-              </ul>
+              <div className="Educational-Background">
+                <ul>
+                  <h5>
+                    {" "}
+                    {this.props.degree} - {this.props.major}{" "}
+                  </h5>
+                  <h5> {this.props.university}</h5>
+                  <div> {this.props.gradDate} </div>
+                  <div> {this.props.gpa}</div>
+                  <div> {this.props.activities}</div>
+                  <div> {this.props.description}</div>
+                </ul>
+              </div>
             </CardText>
           </CardBody>
         </Card>
@@ -58,14 +64,16 @@ class Template extends Component {
           <CardBody>
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
-              <ul>
-                <h5> {this.props.jobTitle}</h5>
-                <h5> {this.props.company}</h5>
-                <div> {this.props.startAndEndDate}</div>
-                <div> {this.props.employmentType}</div>
-                <div> {this.props.location}</div>
-                <div> {this.props.duties}</div>
-              </ul>
+              <div className="Work-Experience">
+                <ul>
+                  <h5> {this.props.jobTitle}</h5>
+                  <h5> {this.props.company}</h5>
+                  <div> {this.props.startAndEndDate}</div>
+                  <div> {this.props.employmentType}</div>
+                  <div> {this.props.location}</div>
+                  <div> {this.props.duties}</div>
+                </ul>
+              </div>
             </CardText>
           </CardBody>
         </Card>

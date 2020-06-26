@@ -17,3 +17,15 @@ body {
   font-size: 30px;
   padding: 10px 10px 0px;
 }
+
+.Professional-summary {
+  text-align: left;
+}
+
+.Educational-Background {
+  text-align: left;
+}
+
+.Work-Experience {
+  text-align: left;
+}
