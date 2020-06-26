@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Template from "./Template";
-//import { Button } from "reactstrap";
 import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 class InputPage extends Component {
@@ -30,6 +29,8 @@ class InputPage extends Component {
       startAndEndDate: "",
       duties: "",
 
+      job: [],
+
       showTemplate: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -39,6 +40,23 @@ class InputPage extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
+  }
+
+  handleAddWork = (event) => {
+    let info = {};
+    info = {
+      company: this.state.company,
+      jobTitle: this.state.jobTitle,
+      startAndEndDate: this.state.startAndEndDate,
+      employmentType: this.state.employmentType,
+      location: this.state.location,
+      duties: this.state.duties,
+    };
+    
+    let job = this.state.job;
+    job.push(info);
+    this.setState({ job: job });
+    console.log("~~~~~~~~", this.state);
   }
 
   clickToggle = () => {
@@ -57,123 +75,9 @@ class InputPage extends Component {
           </Button>
         </div>
       ) : (
-        // <form onSubmit={this.handleSubmit}>
-        //   <h2>Personal Information:</h2>
-        //   <label>
-        //     First name:
-        //     <input
-        //       type="text"
-        //       name="firstName"
-        //       value={this.state.firstName}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Last name:
-        //     <input
-        //       type="text"
-        //       name="lastName"
-        //       value={this.state.lastName}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     City:
-        //     <input
-        //       type="text"
-        //       name="city"
-        //       value={this.state.city}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Phone Number:
-        //     <input
-        //       type="text"
-        //       name="phoneNum"
-        //       value={this.state.phoneNum}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Email:
-        //     <input
-        //       type="text"
-        //       name="email"
-        //       value={this.state.email}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Professional Summary:
-        //     <input
-        //       type="text"
-        //       name="summary"
-        //       value={this.state.summary}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <h2>Educational Background</h2>
-        //   <label>
-        //     University:
-        //     <input
-        //       type="text"
-        //       name="university"
-        //       value={this.state.university}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Major:
-        //     <input
-        //       type="text"
-        //       name="major"
-        //       value={this.state.major}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     GPA:
-        //     <input
-        //       type="text"
-        //       name="gpa"
-        //       value={this.state.gpa}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Activities:
-        //     <input
-        //       type="text"
-        //       name="activities"
-        //       value={this.state.activities}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <label>
-        //     Description:
-        //     <input
-        //       type="text"
-        //       name="description"
-        //       value={this.state.description}
-        //       onChange={this.handleChange}
-        //     />
-        //   </label>
-        //   <br></br>
-        //   <Button outline color="success" onClick={this.clickToggle}>Submit</Button>
-        // </form>
         <div>
           <div className="App-header">Resume Builder</div>
+          <div className="input-pad">
           <Form>
             <h2>Personal Information</h2>
             <Row form>
@@ -317,7 +221,7 @@ class InputPage extends Component {
               </Col>
               <Col md={1}>
                 <FormGroup>
-                  <Label for="gradDate">Graduation Date</Label>
+                  <Label for="gradDate">Grad Date</Label>
                   <Input
                     type="text"
                     name="gradDate"
@@ -467,13 +371,14 @@ class InputPage extends Component {
             <Button outline color="success" onClick={this.clickToggle}>
               Submit
             </Button>
+            <Button outline color="success" onClick={this.handleAddWork}></Button>
           </Form>
+        </div>
         </div>
       );
 
     return (
       <div>
-        {/* <div className="App-header">Resume Builder</div> */}
         {templates}
       </div>
     );

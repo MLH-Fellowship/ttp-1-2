@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import {
   Card,
-  Button,
   CardHeader,
-  CardFooter,
   CardBody,
   CardTitle,
   CardText,
@@ -11,7 +9,9 @@ import {
 
 class Template extends Component {
   render() {
+    console.log("***************", this.props.job)
     return (
+      <div className="template">
       <div>
         <div className="Resume-header">
           <h1>
@@ -24,67 +24,72 @@ class Template extends Component {
         </div>
 
         <Card>
-          <CardHeader tag="h3">Professional Summary</CardHeader>
-          <CardBody>
-            {/* <CardTitle>Special Title Treatment</CardTitle> */}
-            <CardText>
-              <p1> {this.props.summary} </p1>
-            </CardText>
-          </CardBody>
+          <div className="Professional-summary">
+            <CardHeader tag="h3">Professional Summary</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              <CardText>
+                <ul>
+                  <p1> {this.props.summary} </p1>
+                </ul>
+              </CardText>
+            </CardBody>
+          </div>
         </Card>
 
         <Card>
-          <CardHeader tag="h3">Educational Information</CardHeader>
-          <CardBody>
-            {/* <CardTitle>Special Title Treatment</CardTitle> */}
-            <CardText>
-              <ul>
+          <div className="Educational-Background">
+            <CardHeader tag="h3">Educational Information</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              <CardText>
                 <h5>
                   {" "}
                   {this.props.degree} - {this.props.major}{" "}
                 </h5>
                 <h5> {this.props.university}</h5>
-                <div> {this.props.gradDate} </div>
-                <div> {this.props.gpa}</div>
-                <div> {this.props.activities}</div>
-                <div> {this.props.description}</div>
-              </ul>
-            </CardText>
-          </CardBody>
+                <ul>
+                  <li> {this.props.gradDate} </li>
+                  <li> {this.props.gpa}</li>
+                  <li> {this.props.activities}</li>
+                  <li> {this.props.description}</li>
+                </ul>
+              </CardText>
+            </CardBody>
+          </div>
         </Card>
 
         <Card>
-          <CardHeader tag="h3">Work Experience</CardHeader>
-          <CardBody>
-            {/* <CardTitle>Special Title Treatment</CardTitle> */}
-            <CardText>
+          <div className="Work-Experience">
+            <CardHeader tag="h3">Work Experience</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+            {this.props.job.map((result) => {return (
+              <CardText>
+              <h5> {result.jobTitle}</h5>
+              <h5> {result.company}</h5>
               <ul>
+                <li> {result.startAndEndDate}</li>
+                <li> {result.employmentType}</li>
+                <li> {result.location}</li>
+                <li> {result.duties}</li>
+              </ul>
+            </CardText>)
+            })}
+              {/* <CardText>
                 <h5> {this.props.jobTitle}</h5>
                 <h5> {this.props.company}</h5>
-                <div> {this.props.startAndEndDate}</div>
-                <div> {this.props.employmentType}</div>
-                <div> {this.props.location}</div>
-                <div> {this.props.duties}</div>
-              </ul>
-            </CardText>
-          </CardBody>
+                <ul>
+                  <li> {this.props.startAndEndDate}</li>
+                  <li> {this.props.employmentType}</li>
+                  <li> {this.props.location}</li>
+                  <li> {this.props.duties}</li>
+                </ul>
+              </CardText> */}
+            </CardBody>
+          </div>
         </Card>
-
-        {/* <h1>Personal Information</h1>
-        <h1>
-          {this.props.firstName} {this.props.lastName}
-        </h1>
-        <h1>{this.props.city}</h1>
-        <h1>{this.props.phoneNum}</h1>
-        <h1>{this.props.email}</h1>
-        <h1>{this.props.summary}</h1>
-        <h1>Educational Background</h1>
-        <h1>{this.props.university}</h1>
-        <h1>{this.props.major}</h1>
-        <h1>{this.props.degree}</h1>
-        <h1>{this.props.gpa}</h1>
-        <h1>{this.props.activities}</h1>
-        <h1>{this.props.description}</h1> */}
+      </div>
       </div>
     );
   }
