@@ -42,19 +42,21 @@ class Template extends Component {
             <CardHeader tag="h3">Educational Information</CardHeader>
             <CardBody>
               {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              {this.props.education.map((result) => {return (
               <CardText>
                 <h5>
                   {" "}
-                  {this.props.degree} - {this.props.major}{" "}
+                  {result.degree} - {result.major}{" "}
                 </h5>
-                <h5> {this.props.university}</h5>
+                <h5> {result.university}</h5>
                 <ul>
-                  <li> {this.props.gradDate} </li>
-                  <li> {this.props.gpa}</li>
-                  <li> {this.props.activities}</li>
-                  <li> {this.props.description}</li>
+                  <li> {result.gradDate} </li>
+                  <li> {result.gpa}</li>
+                  <li> {result.activities}</li>
+                  <li> {result.description}</li>
                 </ul>
-              </CardText>
+              </CardText>)
+              })}
             </CardBody>
           </div>
         </Card>

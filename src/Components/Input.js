@@ -30,6 +30,7 @@ class InputPage extends Component {
       duties: "",
 
       job: [],
+      education:[],
 
       showTemplate: false,
     };
@@ -67,6 +68,34 @@ class InputPage extends Component {
       duties: ""
   });
 
+  }
+
+  handleAddEducation = (event) => {
+    let info = {};
+    info = {
+      major: this.state.major,
+      degree: this.state.degree,
+      university: this.state.university,
+      gradDate: this.state.gradDate,
+      gpa: this.state.gpa,
+      activities: this.state.activities,
+      description: this.state.description,
+    };
+    
+    let education = this.state.education;
+    education.push(info);
+    this.setState({ education: education });
+    console.log("~~~~~~~~", this.state);
+
+    this.setState({
+      major: "",
+      degree: "",
+      university: "",
+      gradDate: "",
+      gpa: "",
+      activities: "",
+      description: "",
+  });
 
   }
 
@@ -189,7 +218,8 @@ class InputPage extends Component {
                 </FormGroup>
               </Col>
             </Row>
-            <h2>Educational Background</h2>
+            <h2>Educational Background</h2> 
+            <p1>Please add most recent first</p1>{" "} <Button outline color="success" onClick={this.handleAddEducation}>Add Education</Button><br></br>
             <Row form>
               <Col md={4}>
                 <FormGroup>
@@ -290,7 +320,8 @@ class InputPage extends Component {
               </Col>
             </Row>
 
-            <h2>Work Experience</h2> {" "} <Button outline color="success" onClick={this.handleAddWork}>Add Job</Button>
+            <h2>Work Experience</h2> 
+            <p1>Please add most recent first</p1>{" "} <Button outline color="success" onClick={this.handleAddWork}>Add Job</Button><br></br>
             <Row form>
               <Col md={6}>
                 <FormGroup>
