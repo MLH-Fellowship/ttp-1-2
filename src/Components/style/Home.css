@@ -16,5 +16,16 @@ body {
   text-align: right;
   font-size: 30px;
   padding: 10px 10px 0px;
-  /*font: small-caps bold 2.25rem cursive; */
+}
+
+.Professional-summary {
+  text-align: left;
+}
+
+.Educational-Background {
+  text-align: left;
+}
+
+.Work-Experience {
+  text-align: left;
 }
