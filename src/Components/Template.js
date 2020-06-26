@@ -9,6 +9,7 @@ import {
 
 class Template extends Component {
   render() {
+    console.log("***************", this.props.job)
     return (
       <div className="template">
       <div>
@@ -63,7 +64,19 @@ class Template extends Component {
             <CardHeader tag="h3">Work Experience</CardHeader>
             <CardBody>
               {/* <CardTitle>Special Title Treatment</CardTitle> */}
+            {this.props.job.map((result) => {return (
               <CardText>
+              <h5> {result.jobTitle}</h5>
+              <h5> {result.company}</h5>
+              <ul>
+                <li> {result.startAndEndDate}</li>
+                <li> {result.employmentType}</li>
+                <li> {result.location}</li>
+                <li> {result.duties}</li>
+              </ul>
+            </CardText>)
+            })}
+              {/* <CardText>
                 <h5> {this.props.jobTitle}</h5>
                 <h5> {this.props.company}</h5>
                 <ul>
@@ -72,7 +85,7 @@ class Template extends Component {
                   <li> {this.props.location}</li>
                   <li> {this.props.duties}</li>
                 </ul>
-              </CardText>
+              </CardText> */}
             </CardBody>
           </div>
         </Card>
