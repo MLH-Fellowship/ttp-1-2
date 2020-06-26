@@ -43,16 +43,16 @@ class Template extends Component {
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
               <div className="Educational-Background">
+                <h5>
+                  {" "}
+                  {this.props.degree} - {this.props.major}{" "}
+                </h5>
+                <h5> {this.props.university}</h5>
                 <ul>
-                  <h5>
-                    {" "}
-                    {this.props.degree} - {this.props.major}{" "}
-                  </h5>
-                  <h5> {this.props.university}</h5>
-                  <div> {this.props.gradDate} </div>
-                  <div> {this.props.gpa}</div>
-                  <div> {this.props.activities}</div>
-                  <div> {this.props.description}</div>
+                  <li> {this.props.gradDate} </li>
+                  <li> {this.props.gpa}</li>
+                  <li> {this.props.activities}</li>
+                  <li> {this.props.description}</li>
                 </ul>
               </div>
             </CardText>
@@ -65,13 +65,13 @@ class Template extends Component {
             {/* <CardTitle>Special Title Treatment</CardTitle> */}
             <CardText>
               <div className="Work-Experience">
+                <h5> {this.props.jobTitle}</h5>
+                <h5> {this.props.company}</h5>
                 <ul>
-                  <h5> {this.props.jobTitle}</h5>
-                  <h5> {this.props.company}</h5>
-                  <div> {this.props.startAndEndDate}</div>
-                  <div> {this.props.employmentType}</div>
-                  <div> {this.props.location}</div>
-                  <div> {this.props.duties}</div>
+                  <li> {this.props.startAndEndDate}</li>
+                  <li> {this.props.employmentType}</li>
+                  <li> {this.props.location}</li>
+                  <li> {this.props.duties}</li>
                 </ul>
               </div>
             </CardText>
