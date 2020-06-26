@@ -30,6 +30,8 @@ class InputPage extends Component {
       startAndEndDate: "",
       duties: "",
 
+      job: [],
+
       showTemplate: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -39,6 +41,23 @@ class InputPage extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
+  }
+
+  handleAddWork = (event) => {
+    let info = {};
+    info = {
+      company: this.state.company,
+      jobTitle: this.state.jobTitle,
+      startAndEndDate: this.state.startAndEndDate,
+      employmentType: this.state.employmentType,
+      location: this.state.location,
+      duties: this.state.duties,
+    };
+    
+    let job = this.state.job;
+    job.push(info);
+    this.setState({ job: job });
+    console.log("~~~~~~~~", this.state);
   }
 
   clickToggle = () => {
@@ -352,6 +371,7 @@ class InputPage extends Component {
             <Button outline color="success" onClick={this.clickToggle}>
               Submit
             </Button>
+            <Button outline color="success" onClick={this.handleAddWork}></Button>
           </Form>
         </div>
       );
