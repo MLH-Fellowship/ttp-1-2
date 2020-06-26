@@ -29,3 +29,8 @@ body {
 .Work-Experience {
   text-align: left;
 }
+
+.template {
+  padding-right: 50px;
+  padding-left: 50px;
+}
