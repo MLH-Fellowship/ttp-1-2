@@ -12,6 +12,7 @@ import {
 class Template extends Component {
   render() {
     return (
+      <div className="template">
       <div>
         <div className="Resume-header">
           <h1>
@@ -77,6 +78,7 @@ class Template extends Component {
             </CardBody>
           </div>
         </Card>
+      </div>
       </div>
     );
   }
