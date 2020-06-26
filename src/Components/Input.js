@@ -29,6 +29,8 @@ class InputPage extends Component {
       startAndEndDate: "",
       duties: "",
 
+      skills: "",
+
       job: [],
 
       showTemplate: false,
@@ -178,6 +180,24 @@ class InputPage extends Component {
                 </FormGroup>
               </Col>
             </Row>
+
+            <h2>Skills</h2>
+            <Row form>
+              <Col md={12}>
+                <FormGroup>
+                  <Input
+                    type="textarea"
+                    name="skills"
+                    id="skills"
+                    placeholder="Enter skills"
+                    value={this.state.skills}
+                    style={{ height: "100px" }}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+
             <h2>Educational Background</h2>
             <Row form>
               <Col md={4}>
@@ -368,6 +388,7 @@ class InputPage extends Component {
               </Col>
             </Row>
 
+            
             <Button outline color="success" onClick={this.clickToggle}>
               Submit
             </Button>

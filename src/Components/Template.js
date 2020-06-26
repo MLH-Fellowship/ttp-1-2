@@ -39,6 +39,20 @@ class Template extends Component {
 
         <Card>
           <div className="Educational-Background">
+            <CardHeader tag="h3">Skills</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              <CardText>
+                
+                  <p1> {this.props.skills} </p1>
+                
+              </CardText>
+            </CardBody>
+          </div>
+        </Card>
+
+        <Card>
+          <div className="Educational-Background">
             <CardHeader tag="h3">Educational Information</CardHeader>
             <CardBody>
               {/* <CardTitle>Special Title Treatment</CardTitle> */}
