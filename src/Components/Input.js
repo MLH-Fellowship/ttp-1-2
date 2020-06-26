@@ -57,6 +57,17 @@ class InputPage extends Component {
     job.push(info);
     this.setState({ job: job });
     console.log("~~~~~~~~", this.state);
+
+    this.setState({
+      company: "",
+      jobTitle: "",
+      location: "",
+      employmentType: "",
+      startAndEndDate: "",
+      duties: ""
+  });
+
+
   }
 
   clickToggle = () => {
@@ -279,7 +290,7 @@ class InputPage extends Component {
               </Col>
             </Row>
 
-            <h2>Work Experience</h2>
+            <h2>Work Experience</h2> {" "} <Button outline color="success" onClick={this.handleAddWork}>Add Job</Button>
             <Row form>
               <Col md={6}>
                 <FormGroup>
@@ -371,7 +382,6 @@ class InputPage extends Component {
             <Button outline color="success" onClick={this.clickToggle}>
               Submit
             </Button>
-            <Button outline color="success" onClick={this.handleAddWork}></Button>
           </Form>
         </div>
         </div>
