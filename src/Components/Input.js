@@ -18,12 +18,15 @@ class InputPage extends Component {
       major: "",
       degree: "",
       university: "",
+      gradDate: "",
       gpa: "",
       activities: "",
       description: "",
 
       company: "",
       jobTitle: "",
+      location: "",
+      employmentType: "",
       startAndEndDate: "",
       duties: "",
 
@@ -273,7 +276,7 @@ class InputPage extends Component {
             </Row>
             <h2>Educational Background</h2>
             <Row form>
-              <Col md={5}>
+              <Col md={4}>
                 <FormGroup>
                   <Label for="university">University</Label>
                   <Input
@@ -308,6 +311,19 @@ class InputPage extends Component {
                     id="degree"
                     placeholder="Degree"
                     value={this.state.degree}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={1}>
+                <FormGroup>
+                  <Label for="gradDate">Graduation Date</Label>
+                  <Input
+                    type="text"
+                    name="gradDate"
+                    id="gradDate"
+                    placeholder="mm/yyyy"
+                    value={this.state.gradDate}
                     onChange={this.handleChange}
                   />
                 </FormGroup>
@@ -361,41 +377,71 @@ class InputPage extends Component {
 
             <h2>Work Experience</h2>
             <Row form>
-              <Col md={5}>
-                <FormGroup>
-                  <Label for="company">Company</Label>
-                  <Input
-                    type="text"
-                    name="company"
-                    id="company"
-                    placeholder="Company Name"
-                    value={this.state.company}
-                    onChange={this.handleChange}
-                  />
-                </FormGroup>
-              </Col>
-              <Col md={3}>
+              <Col md={6}>
                 <FormGroup>
                   <Label for="jobTitle">Job Title</Label>
                   <Input
                     type="text"
                     name="jobTitle"
                     id="jobTitle"
-                    placeholder="jobTitle"
+                    placeholder="Ex: Retail Sales Management"
                     value={this.state.jobTitle}
                     onChange={this.handleChange}
                   />
                 </FormGroup>
               </Col>
-              <Col md={3}>
+              <Col md={6}>
                 <FormGroup>
-                  <Label for="startAndEndDate">Start Date - End Date</Label>
+                  <Label for="company">Company</Label>
+                  <Input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Ex: Microsoft"
+                    value={this.state.company}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row Form>
+              <Col md={4}>
+                <FormGroup>
+                  <Label for="startAndEndDate">
+                    Start Date - Present/End Date
+                  </Label>
                   <Input
                     type="text"
                     name="startAndEndDate"
                     id="startAndEndDate"
-                    placeholder="Jan 2000 - Jan 3000"
+                    placeholder="mm/yyyy - mm/yyyy"
                     value={this.state.startAndEndDate}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={4}>
+                <FormGroup>
+                  <Label for="location">Location</Label>
+                  <Input
+                    type="text"
+                    name="location"
+                    id="location"
+                    placeholder="Ex: New York, NY"
+                    value={this.state.location}
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={4}>
+                <FormGroup>
+                  <Label for="employmentType">Employment Type</Label>
+                  <Input
+                    type="text"
+                    name="employmentType"
+                    id="employmentType"
+                    placeholder="Ex: Part Time"
+                    value={this.state.employmentType}
                     onChange={this.handleChange}
                   />
                 </FormGroup>
@@ -404,12 +450,12 @@ class InputPage extends Component {
             <Row Form>
               <Col md={12}>
                 <FormGroup>
-                  <Label for="duties">Duties</Label>
+                  <Label for="duties">Description</Label>
                   <Input
                     type="textarea"
                     name="duties"
                     id="duties"
-                    placeholder=""
+                    placeholder="Description"
                     value={this.state.duties}
                     style={{ height: "100px" }}
                     onChange={this.handleChange}
