@@ -24,25 +24,25 @@ class Template extends Component {
         </div>
 
         <Card>
-          <CardHeader tag="h3">Professional Summary</CardHeader>
-          <CardBody>
-            {/* <CardTitle>Special Title Treatment</CardTitle> */}
-            <CardText>
-              <div className="Professional-summary">
+          <div className="Professional-summary">
+            <CardHeader tag="h3">Professional Summary</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              <CardText>
                 <ul>
                   <p1> {this.props.summary} </p1>
                 </ul>
-              </div>
-            </CardText>
-          </CardBody>
+              </CardText>
+            </CardBody>
+          </div>
         </Card>
 
         <Card>
-          <CardHeader tag="h3">Educational Information</CardHeader>
-          <CardBody>
-            {/* <CardTitle>Special Title Treatment</CardTitle> */}
-            <CardText>
-              <div className="Educational-Background">
+          <div className="Educational-Background">
+            <CardHeader tag="h3">Educational Information</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              <CardText>
                 <h5>
                   {" "}
                   {this.props.degree} - {this.props.major}{" "}
@@ -54,17 +54,17 @@ class Template extends Component {
                   <li> {this.props.activities}</li>
                   <li> {this.props.description}</li>
                 </ul>
-              </div>
-            </CardText>
-          </CardBody>
+              </CardText>
+            </CardBody>
+          </div>
         </Card>
 
         <Card>
-          <CardHeader tag="h3">Work Experience</CardHeader>
-          <CardBody>
-            {/* <CardTitle>Special Title Treatment</CardTitle> */}
-            <CardText>
-              <div className="Work-Experience">
+          <div className="Work-Experience">
+            <CardHeader tag="h3">Work Experience</CardHeader>
+            <CardBody>
+              {/* <CardTitle>Special Title Treatment</CardTitle> */}
+              <CardText>
                 <h5> {this.props.jobTitle}</h5>
                 <h5> {this.props.company}</h5>
                 <ul>
@@ -73,9 +73,9 @@ class Template extends Component {
                   <li> {this.props.location}</li>
                   <li> {this.props.duties}</li>
                 </ul>
-              </div>
-            </CardText>
-          </CardBody>
+              </CardText>
+            </CardBody>
+          </div>
         </Card>
       </div>
     );
