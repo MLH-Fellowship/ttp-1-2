@@ -23,9 +23,7 @@ class Template extends Component {
               <CardBody>
                 {/* <CardTitle>Special Title Treatment</CardTitle> */}
                 <CardText>
-                  <ul>
-                    <p1> {this.props.summary} </p1>
-                  </ul>
+                  <p1> {this.props.summary} </p1>
                 </CardText>
               </CardBody>
             </div>
