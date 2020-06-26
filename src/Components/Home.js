@@ -16,7 +16,10 @@ class Home extends Component {
               With our site, you can create one with the click of a button.
             </p>
             <hr className="my-2" />
-            <p>Fill in your information to get a resume within seconds!</p>
+            <p>
+              Fill in your information to get a professional resume that is
+              guaranteed to attract employers!
+            </p>
             <p className="lead">
               <Link to="/input">
                 <Button outline color="primary">
